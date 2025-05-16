@@ -2,14 +2,16 @@ package org.example.model;
 
 public class Estacionamento {
     private String nome;
-    private int numeroDeVagas;
+    private int numeroDeVagasCarros;
+    private int numeroDeVagasMotos;
     private String endereco;
     private String telefone;
     private String email;
 
-    Estacionamento(String nome, int numeroDeVagas, String endereco, String telefone, String email) {
+    Estacionamento(String nome, int numeroDeVagasCarros, int numeroDeVagasMotos, String endereco, String telefone, String email) {
         this.nome = nome;
-        this.numeroDeVagas = numeroDeVagas;
+        this.numeroDeVagasCarros = numeroDeVagasCarros;
+        this.numeroDeVagasMotos = numeroDeVagasMotos;
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
@@ -23,12 +25,12 @@ public class Estacionamento {
         this.nome = nome;
     }
 
-    public int getNumeroDeVagas() {
-        return numeroDeVagas;
+    public int getNumeroDeVagasCarros() {
+        return numeroDeVagasCarros;
     }
 
-    public void setNumeroDeVagas(int numeroDeVagas) {
-        this.numeroDeVagas = numeroDeVagas;
+    public void setNumeroDeVagasCarros(int numeroDeVagasCarros) {
+        this.numeroDeVagasCarros = numeroDeVagasCarros;
     }
 
     public String getEndereco() {
@@ -60,7 +62,7 @@ public class Estacionamento {
         return "\nEstacionamento=" +
                 "\nemail:" + email +
                 "\nnome:'" + nome +
-                "\nnumeroDeVagas:" + numeroDeVagas +
+                "\nnumeroDeVagas:" + numeroDeVagasCarros +
                 "\nendereco:" + endereco +
                 "\ntelefone:" + telefone;
     }

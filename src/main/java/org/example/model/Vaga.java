@@ -1,14 +1,15 @@
 package org.example.model;
 
 import org.example.Enum.StatusVaga;
+import org.example.Enum.TipoVaga;
 
 public class Vaga {
     private int numero;
-    private String tipo;
+    private TipoVaga tipo;
     private StatusVaga status;
     private String veiculo;
 
-    Vaga(int numero, String tipo, StatusVaga status, String veiculo) {
+    Vaga(int numero, TipoVaga tipo, StatusVaga status, String veiculo) {
         this.numero = numero;
         this.tipo = tipo;
         this.status = status;
@@ -23,11 +24,11 @@ public class Vaga {
         this.numero = numero;
     }
 
-    public String getTipo() {
+    public TipoVaga getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoVaga tipo) {
         this.tipo = tipo;
     }
 
