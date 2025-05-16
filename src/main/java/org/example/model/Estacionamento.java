@@ -8,7 +8,7 @@ public class Estacionamento {
     private String telefone;
     private String email;
 
-    Estacionamento(String nome, int numeroDeVagasCarros, int numeroDeVagasMotos, String endereco, String telefone, String email) {
+    public Estacionamento(String nome, int numeroDeVagasCarros, int numeroDeVagasMotos, String endereco, String telefone, String email) {
         this.nome = nome;
         this.numeroDeVagasCarros = numeroDeVagasCarros;
         this.numeroDeVagasMotos = numeroDeVagasMotos;
@@ -55,6 +55,14 @@ public class Estacionamento {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getNumeroDeVagasMotos() {
+        return numeroDeVagasMotos;
+    }
+
+    public void setNumeroDeVagasMotos(int numeroDeVagasMotos) {
+        this.numeroDeVagasMotos = numeroDeVagasMotos;
     }
 
     @Override

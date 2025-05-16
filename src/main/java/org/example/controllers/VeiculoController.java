@@ -16,6 +16,7 @@ public class VeiculoController {
 
     public void criarCarro(String placa, String modelo, String cor, LocalDateTime dataHoraEntrada) {
         veiculos.add(VeiculoFactory.criarCarro(placa, modelo, cor, dataHoraEntrada));
+
     }
 
     public void criarMoto(String placa, String modelo, String cor, LocalDateTime dataHoraEntrada) {

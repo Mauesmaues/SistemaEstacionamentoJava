@@ -7,13 +7,11 @@ public class Vaga {
     private int numero;
     private TipoVaga tipo;
     private StatusVaga status;
-    private String veiculo;
 
-    Vaga(int numero, TipoVaga tipo, StatusVaga status, String veiculo) {
+    public Vaga(int numero, TipoVaga tipo, StatusVaga status) {
         this.numero = numero;
         this.tipo = tipo;
         this.status = status;
-        this.veiculo = veiculo;
     }
 
     public int getNumero() {
@@ -40,20 +38,12 @@ public class Vaga {
         this.status = status;
     }
 
-    public String getVeiculo() {
-        return veiculo;
-    }
-
-    public void setVeiculo(String veiculo) {
-        this.veiculo = veiculo;
-    }
 
     @Override
     public String toString() {
         return "\nVaga=" +
                 "\nnumero:" + numero +
                 "\ntipo:" + tipo +
-                "\nstatus:" + status +
-                "\nveiculo:'" + veiculo;
+                "\nstatus:" + status;
     }
 }
