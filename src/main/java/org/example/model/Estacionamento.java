@@ -1,20 +1,26 @@
 package org.example.model;
 
+import org.example.controllers.VagaController;
+import org.example.factory.VagaFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Estacionamento {
     private String nome;
-    private int numeroDeVagasCarros;
-    private int numeroDeVagasMotos;
+    private int numeroDeVagas;
+    private List<Vaga> vagas;
     private String endereco;
     private String telefone;
     private String email;
 
-    public Estacionamento(String nome, int numeroDeVagasCarros, int numeroDeVagasMotos, String endereco, String telefone, String email) {
+    public Estacionamento(String nome, String endereco, int numeroDeVagas, String telefone, String email) {
         this.nome = nome;
-        this.numeroDeVagasCarros = numeroDeVagasCarros;
-        this.numeroDeVagasMotos = numeroDeVagasMotos;
+        this.numeroDeVagas = numeroDeVagas;
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
+        this.vagas = VagaController.criarVagas(numeroDeVagas);
     }
 
     public String getNome() {
@@ -23,14 +29,6 @@ public class Estacionamento {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getNumeroDeVagasCarros() {
-        return numeroDeVagasCarros;
-    }
-
-    public void setNumeroDeVagasCarros(int numeroDeVagasCarros) {
-        this.numeroDeVagasCarros = numeroDeVagasCarros;
     }
 
     public String getEndereco() {
@@ -57,12 +55,16 @@ public class Estacionamento {
         this.email = email;
     }
 
-    public int getNumeroDeVagasMotos() {
-        return numeroDeVagasMotos;
+    public int getNumeroDeVagas() {
+        return numeroDeVagas;
     }
 
-    public void setNumeroDeVagasMotos(int numeroDeVagasMotos) {
-        this.numeroDeVagasMotos = numeroDeVagasMotos;
+    public void setNumeroDeVagas(int numeroDeVagas) {
+        this.numeroDeVagas = numeroDeVagas;
+    }
+
+    public List<Vaga> getVagas() {
+        return vagas;
     }
 
     @Override
@@ -70,7 +72,7 @@ public class Estacionamento {
         return "\nEstacionamento=" +
                 "\nemail:" + email +
                 "\nnome:'" + nome +
-                "\nnumeroDeVagas:" + numeroDeVagasCarros +
+                "\nnumeroDeVagas:" + numeroDeVagas +
                 "\nendereco:" + endereco +
                 "\ntelefone:" + telefone;
     }

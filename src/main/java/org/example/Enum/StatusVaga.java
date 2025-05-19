@@ -1,5 +1,5 @@
 package org.example.Enum;
 
 public enum StatusVaga {
-    LIVRE, OCUPADA;
+    LIVRE, OCUPADA, LIVREMOTO;
 }

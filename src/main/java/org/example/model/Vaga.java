@@ -8,9 +8,8 @@ public class Vaga {
     private TipoVaga tipo;
     private StatusVaga status;
 
-    public Vaga(int numero, TipoVaga tipo, StatusVaga status) {
+    public Vaga(int numero, StatusVaga status) {
         this.numero = numero;
-        this.tipo = tipo;
         this.status = status;
     }
 
@@ -20,14 +19,6 @@ public class Vaga {
 
     public void setNumero(int numero) {
         this.numero = numero;
-    }
-
-    public TipoVaga getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoVaga tipo) {
-        this.tipo = tipo;
     }
 
     public StatusVaga getStatus() {

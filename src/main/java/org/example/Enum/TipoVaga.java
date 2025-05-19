@@ -1,5 +1,5 @@
 package org.example.Enum;
 
 public enum TipoVaga {
-    CARRO, MOTO;
+    GRANDE, MEDIA, PEQUENA;
 }
