@@ -1,5 +1,5 @@
 package org.example.Enum;
 
 public enum FormaDePagamento {
-    DINHEIRO, DEBITO, CREDITO;
+    DINHEIRO, DEBITO, CREDITO, PIX;
 }
